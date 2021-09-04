@@ -1,0 +1,4 @@
+com/ssutopia/finacial/loanService/LoanApplicationTests.class
+com/ssutopia/finacial/loanService/controller/LoanTypesControllerSecurityTests.class
+com/ssutopia/finacial/loanService/controller/LoanTypesControllerSecurityTests$MockUser.class
+com/ssutopia/finacial/loanService/service/LoanTypeServiceImplUnitTest.class
