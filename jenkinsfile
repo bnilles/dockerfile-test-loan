@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                   
-                    sh 'docker build . -t jbnilles/test:1.0'
+                    sh 'docker build . -t jbnilles/loan-test:latest'
 
                  
             }
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker push jbnilles/test:1.0'
+                sh 'docker push jbnilles/loan-test:latest'
             }
         }
     }
