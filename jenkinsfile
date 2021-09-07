@@ -4,7 +4,7 @@ pipeline {
     stages {
       stage('checkout') {
         steps {
-          git credentialsId: 'git_login', url: 'https://github.com/bnilles/dockerfile-test-loan.git'
+          git branch: 'main', credentialsId: 'git_login', url: 'https://github.com/bnilles/dockerfile-test-loan.git'
         }
       }
         stage('Build') {
