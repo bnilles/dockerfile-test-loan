@@ -15,9 +15,16 @@ pipeline {
                  
             }
         }
-        stage('Test') {
+        stage('SonarQube analysis') {
             steps {
-                echo 'Testing.. ${env.BUILD_NUMBER}'
+                withSonarQubeEnv('SonarQube') {
+                    sh "./gradlew sonarqube"
+                }
+            }
+        }
+        stage("Quality gate") {
+            steps {
+                waitForQualityGate abortPipeline: true
             }
         }
         stage('Deploy') {
