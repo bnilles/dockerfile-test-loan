@@ -29,6 +29,7 @@ pipeline {
                 waitForQualityGate abortPipeline: true
               }
             }
+          }
         stage('Deploy') {
             steps {
                 sh 'docker push jbnilles/loan-test:latest'
